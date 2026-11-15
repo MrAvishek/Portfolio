@@ -1,0 +1,6 @@
+# This is a plain static site (HTML/CSS/JS) with no package.json,
+# so there is nothing to install or build. Override the UI build
+# command (`npm run build`) with a no-op and publish this folder as-is.
+[build]
+  command = "echo 'Static site - no build step required'"
+  publish = "."
