@@ -1,17 +1,124 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Avishek Mondal | Software, AI and Robotics</title><meta name="description" content="Portfolio of Avishek Mondal: software developer working across agentic AI, RAG, computer vision, robotics and embedded systems."><meta property="og:title" content="Avishek Mondal | Software, AI and Robotics"><meta property="og:description" content="Portfolio of Avishek Mondal: software developer working across agentic AI, RAG, computer vision, robotics and embedded systems."><meta property="og:type" content="website">
-<link rel="icon" href="images/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap"><link rel="stylesheet" href="css/style.css"></head><body><main>
-<section class="hero"><div><h1 class="hl" aria-label="I build software that thinks, sees and moves."><span style="animation-delay:.1s">I build</span> <span style="animation-delay:.25s">software</span> <span style="animation-delay:.4s">that</span> <span style="animation-delay:.55s">thinks,</span> <span style="animation-delay:.7s">sees</span> <span style="animation-delay:.85s">and</span> <span style="animation-delay:1s">moves.</span></h1>
-<p class="lead">I’m Avishek Mondal, a software developer working across agentic AI, RAG, computer vision and robotics, from vector databases to ESP32 boards.</p>
-<a class="btn" href="projects.html">Explore Projects</a> <a class="btn ghost" href="about.html">About me</a></div>
-<div class="orbit" aria-hidden="true"><div class="ring" style="--i:0;--d:40s"><i style="--c:var(--lime);--d:40s">Agentic AI</i></div><div class="ring" style="--i:14%;--d:30s"><i style="--c:var(--vio);--d:30s">RAG</i></div><div class="ring" style="--i:26%;--d:22s"><i style="--c:var(--cy);--d:22s">Computer Vision</i></div><div class="ring" style="--i:38%;--d:16s"><i style="--c:var(--warm);--d:16s">ESP32</i></div><div class="core"></div></div></section>
-<section><h2 class="rv">Selected work</h2><div class="grid rv" id="grid" data-limit="4"></div><p style="margin-top:24px"><a class="btn ghost" href="projects.html">All 10 projects</a></p></section>
-<section id="skills"><h2 class="rv">Tools, by domain</h2><div class="skills rv">
-<div style="--c:var(--lime)"><h3>Programming and development</h3><span>Python</span><span>HTML</span><span>CSS</span><span>JavaScript</span><span>FastAPI</span></div>
-<div style="--c:var(--vio)"><h3>AI and machine learning</h3><span>TensorFlow</span><span>Keras</span><span>Scikit-learn</span><span>EfficientNet</span><span>U-Net</span><span>Image classification</span><span>Semantic segmentation</span></div>
-<div style="--c:var(--cy)"><h3>Generative AI and agentic systems</h3><span>LangGraph</span><span>RAG</span><span>Vector databases</span><span>Embeddings</span><span>Pinecone</span><span>Qdrant</span><span>Groq</span><span>Tavily</span></div>
-<div style="--c:var(--warm)"><h3>Robotics and embedded</h3><span>ESP32</span><span>ESP8266</span><span>Arduino</span><span>Raspberry Pi</span><span>Sensors</span><span>Motor control</span><span>Prototyping</span></div>
-<div style="--c:var(--lime)"><h3>Cloud and tools</h3><span>AWS EC2</span><span>Docker</span><span>Git</span><span>GitHub</span><span>Streamlit</span><span>Linux</span></div></div></section>
-<dialog id="dlg" aria-label="Project details"><div id="dbody"></div></dialog>
-</main><script src="js/projects.js"></script><script src="js/main.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Avishek Mondal">
+    <meta name="description" content="Portfolio of Avishek Mondal, AI engineer working across agentic AI, RAG, computer vision, deep learning, robotics and embedded systems.">
+    <meta name="keywords" content="Avishek Mondal, AI Engineer, Agentic AI, RAG, LangGraph, Computer Vision, Robotics, Python, FastAPI">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0c0e0d">
+    <title>Avishek Mondal | AI Engineer and Robotics</title>
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Avishek Mondal | AI Engineer and Robotics">
+    <meta property="og:description" content="Agentic AI, knowledge engineering, computer vision and embedded robotics.">
+    <!-- <meta property="og:image" content="assets/images/og-preview.jpg"> -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pages/home.css">
+</head>
+<body>
+    <a class="skip" href="#main-content">Skip to content</a>
+    <main id="main-content">
+
+        <!-- HERO -->
+        <section class="hero" id="home">
+            <canvas id="field" aria-hidden="true"></canvas>
+
+            <div class="hero-content">
+                <p class="status"><i aria-hidden="true"></i><span>Building</span> <span id="typed"></span></p>
+
+                <h1 class="hl" aria-label="I build software that thinks, sees and moves.">
+                    <span style="animation-delay:.1s">I build</span>
+                    <span style="animation-delay:.25s">software</span>
+                    <span style="animation-delay:.4s">that</span>
+                    <span style="animation-delay:.55s">thinks,</span>
+                    <span style="animation-delay:.7s">sees</span>
+                    <span style="animation-delay:.85s">and</span>
+                    <span style="animation-delay:1s">moves.</span>
+                </h1>
+
+                <p class="lead">
+                    I'm Avishek Mondal, an AI engineer working across agentic AI,
+                    knowledge engineering, computer vision and robotics, from
+                    autonomous workflows to embedded devices.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="projects.html" class="btn">Explore Projects</a>
+                    <a href="about.html" class="btn ghost">About Me</a>
+                </div>
+            </div>
+
+            <div class="orbit" aria-hidden="true">
+                <div class="orbit-track orbit-1"><div class="orbit-label label-agentic"><span class="label-dot"></span>Agentic Systems</div></div>
+                <div class="orbit-track orbit-2"><div class="orbit-label label-knowledge"><span class="label-dot"></span>Knowledge Engineering</div></div>
+                <div class="orbit-track orbit-3"><div class="orbit-label label-vision"><span class="label-dot"></span>Visual Intelligence</div></div>
+                <div class="orbit-track orbit-4"><div class="orbit-label label-robotics"><span class="label-dot"></span>Embedded Robotics</div></div>
+                <div class="orbit-core"><div class="core-glow"></div><span>AI</span><small>ENGINEERING</small></div>
+            </div>
+        </section>
+
+        <!-- FOCUS-AREA TICKER -->
+        <div class="ticker" aria-label="Focus areas">
+            <div class="ticker-track">
+                <span>Agentic AI</span><span>LangGraph</span><span>RAG</span><span>Vector databases</span>
+                <span>Computer vision</span><span>U-Net</span><span>EfficientNet</span><span>Semantic segmentation</span>
+                <span>ESP32</span><span>ESP8266</span><span>Motor control</span><span>Embedded systems</span>
+            </div>
+        </div>
+
+        <!-- SELECTED WORK -->
+        <section id="selected-work">
+            <div class="section-heading">
+                <h2 class="rv">Selected work</h2>
+                <p class="lead rv">Engineering projects spanning AI systems, computer vision and robotics.</p>
+            </div>
+            <div class="grid rv" id="grid" data-limit="4" aria-label="Featured projects"></div>
+            <div class="section-action">
+                <a href="projects.html" class="btn ghost">Explore all 10 projects</a>
+            </div>
+        </section>
+
+        <!-- HOW SYSTEMS WORK -->
+        <section id="pipelines">
+            <div class="section-heading">
+                <h2 class="rv">How the systems work</h2>
+                <p class="lead rv">Illustrative workflows based on each project's architecture. Pick one to watch the data move through it.</p>
+            </div>
+            <div class="pipe-tabs" id="pipe-tabs" role="tablist" aria-label="Project workflows"></div>
+            <ol id="pipe-nodes" aria-live="off"></ol>
+            <p class="pipe-note">Simplified diagrams; see each repository for the real implementation.</p>
+        </section>
+
+        <!-- SKILLS -->
+        <section id="skills">
+            <div class="section-heading">
+                <h2 class="rv">Technical expertise</h2>
+                <p class="lead rv">Technologies and tools, grouped by domain.</p>
+            </div>
+            <div class="skills rv">
+                <div style="--c:var(--lime)"><h3>Programming &amp; development</h3>
+                    <span>Python</span><span>JavaScript</span><span>HTML</span><span>CSS</span><span>FastAPI</span></div>
+                <div style="--c:var(--vio)"><h3>Machine learning &amp; computer vision</h3>
+                    <span>TensorFlow</span><span>Keras</span><span>Scikit-learn</span><span>EfficientNet</span><span>U-Net</span><span>Image classification</span><span>Semantic segmentation</span></div>
+                <div style="--c:var(--cy)"><h3>Generative AI &amp; agentic systems</h3>
+                    <span>LangGraph</span><span>RAG</span><span>LangChain</span><span>Vector databases</span><span>Embeddings</span><span>Pinecone</span><span>Qdrant</span><span>Groq</span><span>Tavily</span></div>
+                <div style="--c:var(--warm)"><h3>Robotics &amp; embedded systems</h3>
+                    <span>ESP32</span><span>ESP8266</span><span>Arduino</span><span>Raspberry Pi</span><span>Sensors</span><span>Motor control</span><span>Prototyping</span></div>
+                <div style="--c:var(--lime)"><h3>Cloud, deployment &amp; tools</h3>
+                    <span>AWS EC2</span><span>Docker</span><span>Git</span><span>GitHub</span><span>Streamlit</span><span>Linux</span></div>
+            </div>
+        </section>
+
+        <dialog id="dlg" aria-label="Project details"><div id="dbody"></div></dialog>
+    </main>
+
+    <script src="js/projects.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/pages/home.js"></script>
+</body>
+</html>

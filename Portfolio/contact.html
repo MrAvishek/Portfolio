@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | Avishek Mondal, AI Engineer and Robotics</title>
+  <meta name="description" content="Get in touch with Avishek Mondal about AI engineering, computer vision, robotics and software projects.">
+  <meta name="theme-color" content="#0c0e0d">
+  <meta property="og:title" content="Contact | Avishek Mondal">
+  <meta property="og:description" content="Email, LinkedIn, GitHub and a contact form for Avishek Mondal.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pages/contact.css">
+</head>
+<body>
+  <a class="skip" href="#main-content">Skip to content</a>
+  <main id="main-content" class="contact-page">
+    <section class="contact-grid">
+
+      <div class="contact-info">
+        <h1>Let's build something<span class="accent">.</span></h1>
+        <p class="lead">Questions about a project, a collaboration or a robotics workshop? Send a message or reach me directly.</p>
+
+        <ul class="channels">
+          <li class="channel spot" style="--c:var(--lime)">
+            <div><span class="ch-label">Email</span><a href="mailto:amondal.dev@gmail.com">amondal.dev@gmail.com</a></div>
+            <button type="button" class="copy" data-copy="amondal.dev@gmail.com" aria-label="Copy email address">Copy</button>
+          </li>
+          <li class="channel spot" style="--c:var(--cy)">
+            <div><span class="ch-label">LinkedIn</span><a href="https://www.linkedin.com/in/avishek-mondal-ovi/" rel="noopener" target="_blank">linkedin.com/in/avishek-mondal-ovi</a></div>
+          </li>
+          <li class="channel spot" style="--c:var(--vio)">
+            <div><span class="ch-label">GitHub</span><a href="https://github.com/MrAvishek" rel="noopener" target="_blank">github.com/MrAvishek</a></div>
+          </li>
+          <li class="channel spot" style="--c:var(--warm)">
+            <div><span class="ch-label">Phone</span><a href="tel:+919830937858">+91 98309 37858</a></div>
+            <button type="button" class="copy" data-copy="+919830937858" aria-label="Copy phone number">Copy</button>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Netlify Forms: works automatically once deployed on Netlify -->
+      <form class="contact-form" name="contact" method="POST" action="contact.html?sent=1" data-netlify="true" netlify-honeypot="bot-field">
+        <h2>Send a message</h2>
+        <input type="hidden" name="form-name" value="contact">
+        <p class="hp" aria-hidden="true"><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+
+        <label for="f-name">Name</label>
+        <input id="f-name" name="name" type="text" autocomplete="name" required>
+
+        <label for="f-email">Email</label>
+        <input id="f-email" name="email" type="email" autocomplete="email" required>
+
+        <label for="f-msg">Message</label>
+        <textarea id="f-msg" name="message" rows="6" required></textarea>
+
+        <button class="btn" type="submit">Send message</button>
+        <p class="form-status" id="status" role="status" aria-live="polite"></p>
+      </form>
+
+    </section>
+  </main>
+  <script src="js/projects.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/pages/contact.js"></script>
+</body>
+</html>
