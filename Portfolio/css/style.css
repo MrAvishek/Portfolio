@@ -235,14 +235,14 @@ footer .lead{margin-top:0}
 @media(prefers-reduced-motion:reduce){.thumb{transition:none}.card:hover .thumb{transform:none}} */
 
 
-Project cards with screenshots
+/* Project cards with screenshots
 .card{display:flex;flex-direction:column;align-items:stretch;justify-content:flex-start;padding:0;overflow:hidden}
 .card .thumb{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;object-position:center;margin:0;border-bottom:1px solid var(--line);transition:transform .5s ease}
 .card:hover .thumb{transform:scale(1.04)}
 .card .body{padding:22px;display:flex;flex-direction:column;align-items:flex-start;flex:1}
 .ph-img{width:100%;aspect-ratio:16/9;background:linear-gradient(135deg,#1c2420,#10161a);border-bottom:1px solid var(--line)}
 .dimg{display:block;width:100%;height:auto;margin-bottom:16px;border:1px solid var(--line);border-radius:10px}
-@media(prefers-reduced-motion:reduce){.card .thumb{transition:none}.card:hover .thumb{transform:none}}
+@media(prefers-reduced-motion:reduce){.card .thumb{transition:none}.card:hover .thumb{transform:none}} */
 
 
 /* Project cards: final layout */
