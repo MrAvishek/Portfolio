@@ -11,7 +11,7 @@ const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.targ
 $$(".rv").forEach(e=>io.observe(e));
 const grid=$("#grid");
 if(grid){const P=window.PROJECTS,dlg=$("#dlg"),lim=+grid.dataset.limit||99,cats=["All",...new Set(P.map(p=>p.c))];
-grid.innerHTML=P.slice(0,lim).map((p,i)=>`<button class="card" data-c="${p.c}" data-i="${i}">${p.img?`<img class="thumb" src="${p.img}" alt="${p.t} screenshot" width="600" height="375" loading="lazy">`:""}<small>${p.c}</small><h3>${p.t}</h3><p>${p.d.slice(0,110)}…</p><div class="tags">${p.k.slice(0,3).map(k=>`<span>${k}</span>`).join("")}</div></button>`).join("");
+grid.innerHTML=P.slice(0,lim).map((p,i)=>`<button class="card" data-c="${p.c}" data-i="${i}">${p.img?`<img class="thumb" src="${p.img}" alt="${p.t} screenshot" width="1600" height="900" loading="lazy">`:`<div class="ph-img" aria-hidden="true"></div>`}<div class="body"><small>${p.c}</small><h3>${p.t}</h3><p>${p.d}</p><div class="tags">${p.k.slice(0,3).map(k=>`<span>${k}</span>`).join("")}</div></div></button>`).join("");
 const fl=$("#filters");
 if(fl){fl.innerHTML=cats.map((c,i)=>`<button aria-pressed="${!i}">${c}</button>`).join("");
 fl.onclick=e=>{const b=e.target.closest("button");if(!b)return;$$("button",fl).forEach(x=>x.setAttribute("aria-pressed",x===b));$$(".card",grid).forEach(c=>{const s=b.textContent==="All"||c.dataset.c===b.textContent;c.classList.toggle("hide",!s);c.classList.remove("in");if(s)requestAnimationFrame(()=>c.classList.add("in"))})}}
