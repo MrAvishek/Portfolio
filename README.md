@@ -10,7 +10,6 @@ RAG, computer vision and embedded robotics.
 | Path | What it is |
 | --- | --- |
 | `Portfolio/` | The published site: plain HTML, CSS and JavaScript, no build step. See [Portfolio/README.md](Portfolio/README.md) for the page layout and how to add a project. |
-| `avishek-portfolio-v1/` | The first version of the site, kept for reference. Not published. |
 | `create_portfolio.py` | The script that scaffolded the original folder structure. |
 
 ## Running it locally
