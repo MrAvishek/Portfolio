@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI, Computer Vision and Robotics Projects | Avishek Mondal</title>
+  <meta name="description" content="Ten projects by Avishek Mondal: agentic RAG systems with LangGraph, U-Net landslide segmentation, an EfficientNet solar panel classifier and ESP32 robots.">
+  <meta name="author" content="Avishek Mondal">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://amondal-dev.in/projects">
+  <meta name="theme-color" content="#0c0e0d">
+  <meta name="color-scheme" content="dark">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Avishek Mondal">
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:url" content="https://amondal-dev.in/projects">
+  <meta property="og:title" content="Projects | Avishek Mondal, AI Engineer">
+  <meta property="og:description" content="Ten projects across agentic AI, computer vision, robotics, IoT and web development.">
+  <meta property="og:image" content="https://amondal-dev.in/assets/images/og-preview.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Avishek Mondal, AI Engineer, working beside a robotic arm">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Projects | Avishek Mondal, AI Engineer">
+  <meta name="twitter:description" content="Ten projects across agentic AI, computer vision, robotics, IoT and web development.">
+  <meta name="twitter:image" content="https://amondal-dev.in/assets/images/og-preview.jpg">
+
+  <link rel="icon" href="favicon.ico" sizes="48x48">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add("js")</script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": "https://amondal-dev.in/projects#page",
+        "url": "https://amondal-dev.in/projects",
+        "name": "Projects by Avishek Mondal",
+        "description": "Ten projects across agentic AI, computer vision, robotics, IoT and web development.",
+        "isPartOf": {
+          "@id": "https://amondal-dev.in/#website"
+        },
+        "author": {
+          "@id": "https://amondal-dev.in/#person"
+        },
+        "mainEntity": {
+          "@id": "https://amondal-dev.in/projects#list"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://amondal-dev.in/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Projects",
+            "item": "https://amondal-dev.in/projects"
+          }
+        ]
+      },
+      {
+        "@type": "ItemList",
+        "@id": "https://amondal-dev.in/projects#list",
+        "numberOfItems": 10,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+              "@type": "SoftwareSourceCode",
+              "name": "HRNexus: Enterprise HR Knowledge Agent",
+              "description": "An AI knowledge system that retrieves and works with information from HR documents through document ingestion, chunking, embeddings and vector search.",
+              "url": "https://amondal-dev.in/projects#hrnexus",
+              "codeRepository": "https://github.com/MrAvishek/HRNexus-Enterprise-HR-Knowledge-Agent",
+              "keywords": "Python, LangGraph, Qdrant, RAG",
+              "author": {
+                "@id": "https://amondal-dev.in/#person"
+              },
+              "image": "https://amondal-dev.in/assets/images/hrnexus.webp"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+              "@type": "SoftwareSourceCode",
+              "name": "Enterprise IT Support Agentic RAG",
+              "description": "A workflow-based agent for IT support questions: it retrieves knowledge, evaluates the evidence, and falls back to web search when needed.",
+              "url": "https://amondal-dev.in/projects#it-support-agent",
+              "codeRepository": "https://github.com/MrAvishek/Enterprise_IT_Support_Agentic_RAG",
+              "keywords": "Python, FastAPI, LangGraph, Pinecone, Groq, Tavily",
+              "author": {
+                "@id": "https://amondal-dev.in/#person"
+              },
+              "image": "https://amondal-dev.in/assets/images/it-support-agent.webp"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "item": {
+              "@type": "SoftwareSourceCode",
+              "name": "Landslide Detection from Satellite Imagery",
+              "description": "Pixel-level landslide segmentation on the Landslide4Sense dataset (128 × 128 patches, 14 bands including Sentinel-2, slope and elevation data) using a U-Net.",
+              "url": "https://amondal-dev.in/projects#landslide-detection",
+              "codeRepository": "https://github.com/MrAvishek/Landslide-Detection-by-satellite-image-processing-with-Deep-learning-",
+              "keywords": "TensorFlow / Keras, U-Net, Multispectral, FastAPI",
+              "author": {
+                "@id": "https://amondal-dev.in/#person"
+              },
+              "image": "https://amondal-dev.in/assets/images/landslide-detection.webp"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "item": {
+              "@type": "SoftwareSourceCode",
+              "name": "Solar Panel Condition Classification",
+              "description": "Image classifier for six panel conditions: bird-drop, clean, dusty, electrical damage, physical damage and snow-covered. Streamlit interface, deployed on an AWS EC2 Linux instance.",
+              "url": "https://amondal-dev.in/projects#solar-panel",
+              "codeRepository": "https://github.com/MrAvishek/Panel-Classifier",
+              "keywords": "EfficientNetB0, Keras Tuner, Streamlit, AWS EC2",
+              "author": {
+                "@id": "https://amondal-dev.in/#person"
+              },
+              "image": "https://amondal-dev.in/assets/images/solar-panel.webp"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "item": {
+              "@type": "SoftwareSourceCode",
+              "name": "ESP32-CAM Surveillance Robot",
+              "description": "A camera-enabled robot built around the ESP32-CAM, combining embedded systems, camera monitoring and motor control.",
+              "url": "https://amondal-dev.in/projects#esp32-cam-robot",
+              "codeRepository": "https://github.com/MrAvishek/ESP-32-cam-Based-Surveillance-Robot-",
+              "keywords": "ESP32-CAM, Motor control, Embedded",
+              "author": {
+                "@id": "https://amondal-dev.in/#person"
+              },
+              "image": "https://amondal-dev.in/assets/images/esp32-cam-robot.webp"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 6,
+            "item": {
+              "@type": "SoftwareSourceCode",
+              "name": "Unmanned Ground Vehicle (UGV)",
+              "description": "A hands-on ground vehicle project involving embedded hardware and ESP32-CAM.",
+              "url": "https://amondal-dev.in/projects#ugv",
+              "codeRepository": "https://github.com/MrAvishek/Unmanned-Ground-Vehicle-UGV-ESP32-cam-",
+              "keywords": "ESP32-CAM, Embedded, Robotics",
+              "author": {
+                "@id": "https://amondal-dev.in/#person"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 7,
+            "item": {
+              "@type": "SoftwareSourceCode",
+              "name": "MiniGameServer",
+              "description": "An ESP8266 board that creates a local Wi-Fi hotspot and serves browser-based games to anyone who connects.",
+              "url": "https://amondal-dev.in/projects#minigameserver",
+              "codeRepository": "https://github.com/MrAvishek/MiniGameServer",
+              "keywords": "ESP8266, Networking, Browser",
+              "author": {
+                "@id": "https://amondal-dev.in/#person"
+              },
+              "image": "https://amondal-dev.in/assets/images/minigameserver.webp"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 8,
+            "item": {
+              "@type": "SoftwareSourceCode",
+              "name": "VirtualMouse",
+              "description": "An exploration of vision-based human-computer interaction through a virtual mouse.",
+              "url": "https://amondal-dev.in/projects#virtual-mouse",
+              "codeRepository": "https://github.com/MrAvishek/VirtualMouse",
+              "keywords": "Computer vision, HCI",
+              "author": {
+                "@id": "https://amondal-dev.in/#person"
+              },
+              "image": "https://amondal-dev.in/assets/images/virtual-mouse.webp"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 9,
+            "item": {
+              "@type": "SoftwareSourceCode",
+              "name": "ChatApplication",
+              "description": "A web-based chat application project.",
+              "url": "https://amondal-dev.in/projects#chat-app",
+              "codeRepository": "https://github.com/MrAvishek/ChatApplication",
+              "keywords": "Web development",
+              "author": {
+                "@id": "https://amondal-dev.in/#person"
+              },
+              "image": "https://amondal-dev.in/assets/images/chat-app.webp"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 10,
+            "item": {
+              "@type": "SoftwareSourceCode",
+              "name": "WeatherApp",
+              "description": "A weather application built as a web development project.",
+              "url": "https://amondal-dev.in/projects#weather-app",
+              "codeRepository": "https://github.com/MrAvishek/weatherApp",
+              "keywords": "Web development",
+              "author": {
+                "@id": "https://amondal-dev.in/#person"
+              },
+              "image": "https://amondal-dev.in/assets/images/weather-app.webp"
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <script type="speculationrules">
+  {"prerender":[{"where":{"and":[{"href_matches":"/*"},{"not":{"selector_matches":"[target=_blank]"}}]},"eagerness":"moderate"}]}
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main-content">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="nav" aria-label="Main">
+      <a class="logo" href="index.html" aria-label="Avishek Mondal, home">avishek<b>.</b>mondal</a>
+      <button id="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Menu"><span></span><span></span></button>
+      <ul id="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html" aria-current="page">Projects</a></li>
+        <li><a href="about.html#experience">Experience</a></li>
+        <li class="nav-cta"><a class="btn sm" href="contact.html">Get in touch</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="projects-page">
+      <div class="page-head">
+        <p class="eyebrow">Projects</p>
+        <h1>Things I've built<span class="accent">.</span></h1>
+        <p class="lead">Ten projects across agentic AI, computer vision, robotics and the web. Select one to see how it works and open its repository.</p>
+      </div>
+
+      <div class="filters" id="filters" role="group" aria-label="Filter by category"></div>
+
+      <div class="grid" id="grid">
+        <article class="card rv" id="hrnexus" data-cat="AI Engineering" data-flow="HR documents|Chunking|Embeddings|Qdrant retrieval|Agent workflow|Answer" data-full="assets/images/hrnexus.webp">
+          <div class="thumb-wrap">
+            <img class="thumb" src="assets/images/hrnexus-800.webp" srcset="assets/images/hrnexus-800.webp 800w, assets/images/hrnexus.webp 1200w" sizes="(max-width: 700px) 92vw, (max-width: 1060px) 46vw, 370px" alt="HRNexus: Enterprise HR Knowledge Agent project preview" width="1200" height="670" loading="lazy" decoding="async">
+          </div>
+          <div class="body">
+            <p class="card-cat">AI Engineering</p>
+            <h2 class="card-title"><button type="button" class="card-open" aria-haspopup="dialog">HRNexus: Enterprise HR Knowledge Agent</button></h2>
+            <p class="card-desc">An AI knowledge system that retrieves and works with information from HR documents through document ingestion, chunking, embeddings and vector search.</p>
+            <div class="card-foot">
+              <ul class="tags"><li>Python</li><li>LangGraph</li><li>Qdrant</li><li>RAG</li></ul>
+              <a class="card-repo" href="https://github.com/MrAvishek/HRNexus-Enterprise-HR-Knowledge-Agent" target="_blank" rel="noopener">Code <span aria-hidden="true">↗</span><span class="sr-only"> for HRNexus: Enterprise HR Knowledge Agent on GitHub</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card rv" id="it-support-agent" data-cat="AI Engineering" data-flow="User query|Query routing|Knowledge retrieval|Evidence evaluation|Web search if required|Answer generation" data-full="assets/images/it-support-agent.webp">
+          <div class="thumb-wrap">
+            <img class="thumb" src="assets/images/it-support-agent-800.webp" srcset="assets/images/it-support-agent-800.webp 800w, assets/images/it-support-agent.webp 1200w" sizes="(max-width: 700px) 92vw, (max-width: 1060px) 46vw, 370px" alt="Enterprise IT Support Agentic RAG project preview" width="1200" height="670" loading="lazy" decoding="async">
+          </div>
+          <div class="body">
+            <p class="card-cat">AI Engineering</p>
+            <h2 class="card-title"><button type="button" class="card-open" aria-haspopup="dialog">Enterprise IT Support Agentic RAG</button></h2>
+            <p class="card-desc">A workflow-based agent for IT support questions: it retrieves knowledge, evaluates the evidence, and falls back to web search when needed.</p>
+            <div class="card-foot">
+              <ul class="tags"><li>Python</li><li>FastAPI</li><li>LangGraph</li><li>Pinecone</li><li>Groq</li><li>Tavily</li></ul>
+              <a class="card-repo" href="https://github.com/MrAvishek/Enterprise_IT_Support_Agentic_RAG" target="_blank" rel="noopener">Code <span aria-hidden="true">↗</span><span class="sr-only"> for Enterprise IT Support Agentic RAG on GitHub</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card rv" id="landslide-detection" data-cat="Computer Vision" data-flow="Satellite image|Multispectral input|U-Net model|Pixel-level segmentation|Result visualization" data-full="assets/images/landslide-detection.webp">
+          <div class="thumb-wrap">
+            <img class="thumb" src="assets/images/landslide-detection-800.webp" srcset="assets/images/landslide-detection-800.webp 800w, assets/images/landslide-detection.webp 1200w" sizes="(max-width: 700px) 92vw, (max-width: 1060px) 46vw, 370px" alt="Landslide Detection from Satellite Imagery project preview" width="1200" height="670" loading="lazy" decoding="async">
+          </div>
+          <div class="body">
+            <p class="card-cat">Computer Vision</p>
+            <h2 class="card-title"><button type="button" class="card-open" aria-haspopup="dialog">Landslide Detection from Satellite Imagery</button></h2>
+            <p class="card-desc">Pixel-level landslide segmentation on the Landslide4Sense dataset (128 × 128 patches, 14 bands including Sentinel-2, slope and elevation data) using a U-Net.</p>
+            <div class="card-foot">
+              <ul class="tags"><li>TensorFlow / Keras</li><li>U-Net</li><li>Multispectral</li><li>FastAPI</li></ul>
+              <a class="card-repo" href="https://github.com/MrAvishek/Landslide-Detection-by-satellite-image-processing-with-Deep-learning-" target="_blank" rel="noopener">Code <span aria-hidden="true">↗</span><span class="sr-only"> for Landslide Detection from Satellite Imagery on GitHub</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card rv" id="solar-panel" data-cat="Computer Vision" data-flow="Image upload|Preprocessing|EfficientNetB0|Classification|Predicted panel condition" data-full="assets/images/solar-panel.webp">
+          <div class="thumb-wrap">
+            <img class="thumb" src="assets/images/solar-panel-800.webp" srcset="assets/images/solar-panel-800.webp 800w, assets/images/solar-panel.webp 1200w" sizes="(max-width: 700px) 92vw, (max-width: 1060px) 46vw, 370px" alt="Solar Panel Condition Classification project preview" width="1200" height="670" loading="lazy" decoding="async">
+          </div>
+          <div class="body">
+            <p class="card-cat">Computer Vision</p>
+            <h2 class="card-title"><button type="button" class="card-open" aria-haspopup="dialog">Solar Panel Condition Classification</button></h2>
+            <p class="card-desc">Image classifier for six panel conditions: bird-drop, clean, dusty, electrical damage, physical damage and snow-covered. Streamlit interface, deployed on an AWS EC2 Linux instance.</p>
+            <div class="card-foot">
+              <ul class="tags"><li>EfficientNetB0</li><li>Keras Tuner</li><li>Streamlit</li><li>AWS EC2</li></ul>
+              <a class="card-repo" href="https://github.com/MrAvishek/Panel-Classifier" target="_blank" rel="noopener">Code <span aria-hidden="true">↗</span><span class="sr-only"> for Solar Panel Condition Classification on GitHub</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card rv" id="esp32-cam-robot" data-cat="Robotics &amp; IoT" data-flow="Camera|ESP32-CAM|Motor control|Robot" data-full="assets/images/esp32-cam-robot.webp" data-demo="https://drive.google.com/file/d/1EZhBB7vqIVUU9zlKo6yndRyvZQyGgQO8/view?usp=drive_link">
+          <div class="thumb-wrap">
+            <img class="thumb" src="assets/images/esp32-cam-robot-800.webp" srcset="assets/images/esp32-cam-robot-800.webp 800w, assets/images/esp32-cam-robot.webp 1200w" sizes="(max-width: 700px) 92vw, (max-width: 1060px) 46vw, 370px" alt="ESP32-CAM Surveillance Robot project preview" width="1200" height="670" loading="lazy" decoding="async">
+          </div>
+          <div class="body">
+            <p class="card-cat">Robotics &amp; IoT</p>
+            <h2 class="card-title"><button type="button" class="card-open" aria-haspopup="dialog">ESP32-CAM Surveillance Robot</button></h2>
+            <p class="card-desc">A camera-enabled robot built around the ESP32-CAM, combining embedded systems, camera monitoring and motor control.</p>
+            <div class="card-foot">
+              <ul class="tags"><li>ESP32-CAM</li><li>Motor control</li><li>Embedded</li></ul>
+              <a class="card-repo" href="https://github.com/MrAvishek/ESP-32-cam-Based-Surveillance-Robot-" target="_blank" rel="noopener">Code <span aria-hidden="true">↗</span><span class="sr-only"> for ESP32-CAM Surveillance Robot on GitHub</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card rv" id="ugv" data-cat="Robotics &amp; IoT" data-flow="ESP32-CAM|Embedded hardware|Ground vehicle">
+          <div class="thumb-wrap">
+            <div class="ph-img" aria-hidden="true">UGV</div>
+          </div>
+          <div class="body">
+            <p class="card-cat">Robotics &amp; IoT</p>
+            <h2 class="card-title"><button type="button" class="card-open" aria-haspopup="dialog">Unmanned Ground Vehicle (UGV)</button></h2>
+            <p class="card-desc">A hands-on ground vehicle project involving embedded hardware and ESP32-CAM.</p>
+            <div class="card-foot">
+              <ul class="tags"><li>ESP32-CAM</li><li>Embedded</li><li>Robotics</li></ul>
+              <a class="card-repo" href="https://github.com/MrAvishek/Unmanned-Ground-Vehicle-UGV-ESP32-cam-" target="_blank" rel="noopener">Code <span aria-hidden="true">↗</span><span class="sr-only"> for Unmanned Ground Vehicle (UGV) on GitHub</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card rv" id="minigameserver" data-cat="Robotics &amp; IoT" data-flow="ESP8266|Wi-Fi hotspot|Browser|Game" data-full="assets/images/minigameserver.webp">
+          <div class="thumb-wrap">
+            <img class="thumb" src="assets/images/minigameserver-800.webp" srcset="assets/images/minigameserver-800.webp 800w, assets/images/minigameserver.webp 1200w" sizes="(max-width: 700px) 92vw, (max-width: 1060px) 46vw, 370px" alt="MiniGameServer project preview" width="1200" height="670" loading="lazy" decoding="async">
+          </div>
+          <div class="body">
+            <p class="card-cat">Robotics &amp; IoT</p>
+            <h2 class="card-title"><button type="button" class="card-open" aria-haspopup="dialog">MiniGameServer</button></h2>
+            <p class="card-desc">An ESP8266 board that creates a local Wi-Fi hotspot and serves browser-based games to anyone who connects.</p>
+            <div class="card-foot">
+              <ul class="tags"><li>ESP8266</li><li>Networking</li><li>Browser</li></ul>
+              <a class="card-repo" href="https://github.com/MrAvishek/MiniGameServer" target="_blank" rel="noopener">Code <span aria-hidden="true">↗</span><span class="sr-only"> for MiniGameServer on GitHub</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card rv" id="virtual-mouse" data-cat="Computer Vision" data-flow="Camera|Vision processing|Pointer" data-full="assets/images/virtual-mouse.webp">
+          <div class="thumb-wrap">
+            <img class="thumb" src="assets/images/virtual-mouse-800.webp" srcset="assets/images/virtual-mouse-800.webp 800w, assets/images/virtual-mouse.webp 1200w" sizes="(max-width: 700px) 92vw, (max-width: 1060px) 46vw, 370px" alt="VirtualMouse project preview" width="1200" height="670" loading="lazy" decoding="async">
+          </div>
+          <div class="body">
+            <p class="card-cat">Computer Vision</p>
+            <h2 class="card-title"><button type="button" class="card-open" aria-haspopup="dialog">VirtualMouse</button></h2>
+            <p class="card-desc">An exploration of vision-based human-computer interaction through a virtual mouse.</p>
+            <div class="card-foot">
+              <ul class="tags"><li>Computer vision</li><li>HCI</li></ul>
+              <a class="card-repo" href="https://github.com/MrAvishek/VirtualMouse" target="_blank" rel="noopener">Code <span aria-hidden="true">↗</span><span class="sr-only"> for VirtualMouse on GitHub</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card rv" id="chat-app" data-cat="Web Development" data-full="assets/images/chat-app.webp">
+          <div class="thumb-wrap">
+            <img class="thumb" src="assets/images/chat-app-800.webp" srcset="assets/images/chat-app-800.webp 800w, assets/images/chat-app.webp 1200w" sizes="(max-width: 700px) 92vw, (max-width: 1060px) 46vw, 370px" alt="ChatApplication project preview" width="1200" height="670" loading="lazy" decoding="async">
+          </div>
+          <div class="body">
+            <p class="card-cat">Web Development</p>
+            <h2 class="card-title"><button type="button" class="card-open" aria-haspopup="dialog">ChatApplication</button></h2>
+            <p class="card-desc">A web-based chat application project.</p>
+            <div class="card-foot">
+              <ul class="tags"><li>Web development</li></ul>
+              <a class="card-repo" href="https://github.com/MrAvishek/ChatApplication" target="_blank" rel="noopener">Code <span aria-hidden="true">↗</span><span class="sr-only"> for ChatApplication on GitHub</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card rv" id="weather-app" data-cat="Web Development" data-full="assets/images/weather-app.webp">
+          <div class="thumb-wrap">
+            <img class="thumb" src="assets/images/weather-app-800.webp" srcset="assets/images/weather-app-800.webp 800w, assets/images/weather-app.webp 1200w" sizes="(max-width: 700px) 92vw, (max-width: 1060px) 46vw, 370px" alt="WeatherApp project preview" width="1200" height="670" loading="lazy" decoding="async">
+          </div>
+          <div class="body">
+            <p class="card-cat">Web Development</p>
+            <h2 class="card-title"><button type="button" class="card-open" aria-haspopup="dialog">WeatherApp</button></h2>
+            <p class="card-desc">A weather application built as a web development project.</p>
+            <div class="card-foot">
+              <ul class="tags"><li>Web development</li></ul>
+              <a class="card-repo" href="https://github.com/MrAvishek/weatherApp" target="_blank" rel="noopener">Code <span aria-hidden="true">↗</span><span class="sr-only"> for WeatherApp on GitHub</span></a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <dialog id="dlg" aria-label="Project details"><div id="dbody"></div></dialog>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="wrap footer-cta">
+      <p class="eyebrow">Contact</p>
+      <h2>Let's talk<span class="accent">.</span></h2>
+      <p class="lead">Open to conversations about AI engineering, agentic systems and robotics.</p>
+      <p class="footer-actions">
+        <a class="btn" href="contact.html">Get in touch <span class="arr" aria-hidden="true">→</span></a>
+        <a class="btn ghost" href="https://github.com/MrAvishek" target="_blank" rel="me noopener">GitHub</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/avishek-mondal-ovi/" target="_blank" rel="me noopener">LinkedIn</a>
+      </p>
+    </div>
+    <div class="wrap footer-bottom">
+      <a class="logo" href="index.html">avishek<b>.</b>mondal</a>
+      <nav aria-label="Footer">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="about.html#experience">Experience</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <p class="ph">© <span id="year">2026</span> Avishek Mondal · <a href="mailto:amondal.dev@gmail.com">amondal.dev@gmail.com</a></p>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
