@@ -1,4 +1,4 @@
-# Response headers for the hosted site (read by Cloudflare and Netlify).
+# Response headers for the hosted site (read by Cloudflare).
 
 /*
   X-Content-Type-Options: nosniff
