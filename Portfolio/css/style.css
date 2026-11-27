@@ -250,15 +250,26 @@ dialog[open]::backdrop{opacity:1}
   dialog[open]{opacity:0;transform:translateY(18px) scale(.97)}
   dialog[open]::backdrop{opacity:0}
 }
-.d-img{width:100%;aspect-ratio:16/9;object-fit:cover;border-bottom:1px solid var(--line)}
+/* While the card image grows into the dialog, that animation replaces the fade above */
+dialog.no-anim,dialog.no-anim::backdrop{transition:none}
+.d-img{width:100%;aspect-ratio:16/9;object-fit:cover;border-bottom:1px solid var(--line);border-radius:19px 19px 0 0}
 .d-body{padding:26px 28px 28px}
 .d-body .card-cat{margin-bottom:8px}
 .d-body h2{margin:0 0 10px;font-size:1.6rem;letter-spacing:-.02em}
 .d-body>p{color:var(--mut)}
 .flow{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:20px 0 6px;list-style:none}
 .flow li{display:flex;align-items:center;gap:8px}
-.flow li span{padding:8px 12px;background:var(--bg);border:1px solid color-mix(in srgb,var(--c) 45%,var(--line));border-radius:8px;font-size:.85rem}
-.flow li:not(:last-child)::after{content:"→";color:var(--c)}
+/* Steps start dim and light up in order (js/main.js adds .on) */
+.flow li span{
+  padding:8px 12px;background:var(--bg);border:1px solid var(--line);border-radius:8px;color:var(--mut);font-size:.85rem;
+  transition:border-color .4s ease,color .4s ease,box-shadow .4s ease,transform .4s var(--ease);
+}
+.flow li:not(:last-child)::after{content:"→";color:var(--line-hover);transition:color .4s ease}
+.flow li.on span{
+  border-color:var(--c);color:var(--tx);transform:translateY(-2px);
+  box-shadow:0 0 20px color-mix(in srgb,var(--c) 28%,transparent);
+}
+.flow li.on:not(:last-child)::after{color:var(--c)}
 .d-body .tags{margin-top:16px}
 .d-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
 .d-close{
@@ -320,9 +331,25 @@ dialog[open]::backdrop{opacity:1}
   /* Filtering projects: let the cards glide, keep the rest of the page still */
   .vt-filter::view-transition-old(root),.vt-filter::view-transition-new(root){animation:none}
   ::view-transition-group(*){animation-duration:.45s;animation-timing-function:var(--ease)}
+
+  /* Opening or closing a project: the card image and the dialog image share a
+     name, so one grows into the other while the dialog fades around it. */
+  .vt-dialog .d-img{view-transition-name:project-media}
+  .vt-dialog dialog{view-transition-name:project-dialog}
+  .vt-dialog .site-header,.vt-dialog .site-footer{view-transition-name:none}
+  .vt-dialog::view-transition-old(root){animation:vt-fade-out .35s ease both}
+  .vt-dialog::view-transition-new(root){animation:vt-fade-in .35s ease both}
+  ::view-transition-group(project-dialog){z-index:1}
+  ::view-transition-group(project-media){z-index:2}
+  ::view-transition-new(project-dialog):only-child{animation:vt-dialog-in .45s var(--ease) both}
+  ::view-transition-old(project-dialog):only-child{animation:vt-dialog-out .25s ease both}
 }
 @keyframes vt-out{to{opacity:0;transform:translateY(-10px)}}
 @keyframes vt-in{from{opacity:0;transform:translateY(14px)}}
+@keyframes vt-fade-out{to{opacity:0}}
+@keyframes vt-fade-in{from{opacity:0}}
+@keyframes vt-dialog-in{from{opacity:0;transform:translateY(18px) scale(.97)}}
+@keyframes vt-dialog-out{to{opacity:0;transform:translateY(12px) scale(.98)}}
 
 /* ---------- 14 Responsive ---------- */
 @media(max-width:820px){

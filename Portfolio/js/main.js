@@ -132,7 +132,12 @@
     const dlg = $("#dlg");
     const body = $("#dbody");
     if (dlg && body) {
-      const open = card => {
+      let current = null; // the card whose details are showing
+      let flowTimer = 0;
+      let morphSeq = 0;
+      const canMorph = !still && typeof document.startViewTransition === "function";
+
+      const fill = card => {
         const title = $(".card-open", card).textContent.trim();
         const cat = card.dataset.cat || "";
         const desc = $(".card-desc", card).textContent.trim();
@@ -159,8 +164,64 @@
             `</p>` +
           `</div>`;
         dlg.style.setProperty("--c", getComputedStyle(card).getPropertyValue("--c"));
-        dlg.showModal();
-        dlg.scrollTop = 0;
+      };
+
+      // The workflow steps light up one after another, as on the home page
+      const runFlow = () => {
+        clearInterval(flowTimer);
+        if (!dlg.open) return;
+        const steps = $$(".flow li", body);
+        if (!steps.length) return;
+        if (still) { steps.forEach(s => s.classList.add("on")); return; }
+        let k = 0;
+        const tick = () => {
+          steps.forEach((s, j) => s.classList.toggle("on", j <= k));
+          k = (k + 1) % (steps.length + 2);
+        };
+        tick();
+        flowTimer = setInterval(tick, 700);
+      };
+
+      // Runs `update` inside a view transition so the card's image and the
+      // dialog's image grow into each other. The sequence number stops an
+      // interrupted transition from tidying up after a newer one.
+      const morph = (thumb, update) => {
+        const mine = ++morphSeq;
+        root.classList.add("vt-dialog");
+        dlg.classList.add("no-anim");
+        const done = () => {
+          thumb.style.viewTransitionName = "";
+          if (mine !== morphSeq) return;
+          root.classList.remove("vt-dialog");
+          dlg.classList.remove("no-anim");
+        };
+        document.startViewTransition(update).finished.then(done, done);
+      };
+
+      const open = card => {
+        // A second click while the first is still opening (a double-click) is ignored
+        if (dlg.open || root.classList.contains("vt-dialog")) return;
+        current = card;
+        const thumb = $(".thumb", card);
+        const show = () => { fill(card); if (!dlg.open) dlg.showModal(); dlg.scrollTop = 0; };
+        if (canMorph && thumb) {
+          thumb.style.viewTransitionName = "project-media";
+          morph(thumb, () => { thumb.style.viewTransitionName = ""; show(); });
+        } else {
+          show();
+        }
+        setTimeout(runFlow, 450);
+      };
+
+      const close = () => {
+        if (!dlg.open) return;
+        clearInterval(flowTimer);
+        const thumb = current && $(".thumb", current);
+        if (canMorph && thumb) {
+          morph(thumb, () => { dlg.close(); thumb.style.viewTransitionName = "project-media"; });
+        } else {
+          dlg.close();
+        }
       };
 
       grid.addEventListener("click", e => {
@@ -169,8 +230,11 @@
         if (card) open(card);
       });
       dlg.addEventListener("click", e => {
-        if (e.target === dlg || e.target.closest("[data-close]")) dlg.close();
+        if (e.target === dlg || e.target.closest("[data-close]")) close();
       });
+      // Escape key: close the same way as the buttons
+      dlg.addEventListener("cancel", e => { e.preventDefault(); close(); });
+      dlg.addEventListener("close", () => clearInterval(flowTimer));
     }
   }
 

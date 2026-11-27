@@ -24,7 +24,27 @@
 .contact-form textarea{resize:vertical;min-height:140px}
 .contact-form input:focus,.contact-form textarea:focus{outline:none;border-color:var(--lime);box-shadow:0 0 0 3px #b6ff3c22}
 .contact-form .btn{margin-top:22px}
-.contact-form .btn[disabled]{opacity:.6;cursor:wait}
+.contact-form .btn[disabled]{opacity:.8;cursor:wait}
+
+/* Send button: a spinner while sending, a drawn tick once sent */
+.send-btn{min-width:11.5em}
+.send-icon{display:none;flex-shrink:0;width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.send-icon .ring{stroke-dasharray:50.3;stroke-dashoffset:36}
+.send-icon .tick{stroke-dasharray:12;stroke-dashoffset:12}
+.send-btn[data-state="sending"] .send-icon{display:block;animation:spin .8s linear infinite}
+.send-btn[data-state="sent"]{animation:sentPop .5s var(--ease)}
+.send-btn[data-state="sent"] .send-icon{display:block}
+.send-btn[data-state="sent"] .ring{stroke-dashoffset:0;transition:stroke-dashoffset .45s ease}
+.send-btn[data-state="sent"] .tick{stroke-dashoffset:0;transition:stroke-dashoffset .3s ease .3s}
+.send-btn[data-state="error"]{background:var(--warm);animation:shake .4s ease}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes sentPop{40%{transform:scale(1.06)}}
+@keyframes shake{20%,60%{transform:translateX(-5px)}40%,80%{transform:translateX(5px)}}
+/* The whole form glows briefly when a message goes out */
+.contact-form::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;box-shadow:inset 0 0 0 1px var(--lime),inset 0 0 60px #b6ff3c1f;transition:opacity .5s ease}
+.contact-form.sent::after{opacity:1}
+.form-status.ok,.form-status.err{animation:statusIn .4s var(--ease)}
+@keyframes statusIn{from{opacity:0;transform:translateY(6px)}}
 .hp{position:absolute;left:-9999px}
 .form-status{min-height:1.5em;margin-top:14px;color:var(--mut);font-size:.95rem}
 .form-status.ok{color:var(--lime)}
