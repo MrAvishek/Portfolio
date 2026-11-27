@@ -340,6 +340,48 @@
   color: var(--lime);
 }
 
+/* Group labels inside a role. The key group is highlighted; the
+   groups after it are slightly quieter. */
+
+.experience-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin: 24px 0 0;
+
+  color: var(--mut);
+  font-size: .74rem;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.experience-group.is-key {
+  color: var(--lime);
+}
+
+.experience-group.is-key::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--lime);
+  box-shadow: 0 0 10px var(--lime);
+}
+
+.experience-group + .experience-responsibilities {
+  margin-top: 10px;
+}
+
+.experience-responsibilities.is-secondary {
+  color: #b7c0b9;
+}
+
+.experience-responsibilities.is-secondary li::marker {
+  color: var(--mut);
+}
+
 
 /* ---------- TIMELINE ---------- */
 
