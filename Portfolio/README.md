@@ -43,9 +43,24 @@ projects featured there.
 
 ## Images
 
-Project images are 1200 px wide with an 800 px copy (`name-800.webp`) that
-phones and small cards load instead. If you add an image without a smaller
-copy, point `src` at the one file and delete the `srcset` attribute.
+Images are grouped by the page that uses them, inside `assets/images/`:
+
+- `home/`: the photo in the home page header.
+- `about/`: the lab photo and the event photos.
+- `projects/<project id>/`: one folder per project, named after the card's
+  `id` in `projects.html`. Each holds `cover.webp` (1200 px wide) and
+  `cover-800.webp`, a smaller copy that phones and small cards load instead.
+  Extra screenshots for a project go in the same folder.
+- The favicon, phone icon and link-preview image sit directly in
+  `assets/images/` because every page uses them.
+
+Folder and file names are lowercase with hyphens, e.g. `it-support-agent`.
+
+If you add a project image without a smaller copy, point `src` at the one file
+and delete the `srcset` attribute.
+
+`assets/images/originals/` holds full-size source files. It stays on your
+computer only and is not uploaded.
 
 ## Search engines
 
