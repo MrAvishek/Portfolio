@@ -35,9 +35,9 @@ copy an existing block and change:
 - `data-demo`: optional link to a demo video.
 - the image, title, description, tags and GitHub link inside the block.
 
-Then update the three places that mention the number of projects: the intro
-text and the `numberOfItems` list at the top of `projects.html`, and the
-"Explore all 10 projects" button in `index.html`. The four cards on the home
+Then update the places that mention the number of projects: the description
+and intro text and the `numberOfItems` list in `projects.html`, and the
+"Explore all … projects" button in `index.html`. The four cards on the home
 page are separate copies; edit them in `index.html` if you want different
 projects featured there.
 

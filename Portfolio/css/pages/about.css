@@ -26,7 +26,8 @@
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 4 / 5;
+  max-height: calc(100vh - 170px);
   object-fit: cover;
   object-position: center 30%;
 
@@ -286,18 +287,6 @@
   color: var(--mut);
 }
 
-.education-score {
-  text-align: right;
-  flex-shrink: 0;
-}
-
-.education-score strong {
-  display: block;
-  color: var(--lime);
-  font-size: 2.2rem;
-  line-height: 1.1;
-}
-
 
 /* ---------- EXPERIENCE ---------- */
 
@@ -398,6 +387,10 @@
 
 .timeline-section {
   margin-top: 56px;
+}
+
+.split > .timeline-section {
+  margin-top: 0;
 }
 
 .timeline-section > h3 {
@@ -617,6 +610,12 @@
     margin: 0 auto;
   }
 
+  .about-photo img {
+    aspect-ratio: 1;
+    max-height: none;
+    object-position: center 22%;
+  }
+
   .glance,
   .sides {
     grid-template-columns: 1fr;
@@ -625,10 +624,6 @@
   .education-card {
     flex-direction: column;
     align-items: flex-start;
-  }
-
-  .education-score {
-    text-align: left;
   }
 
   .timeline-item.has-photo {
