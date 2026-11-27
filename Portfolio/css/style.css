@@ -161,7 +161,6 @@ p.lead{max-width:60ch;margin:22px 0 32px;color:var(--mut);font-size:1.15rem}
 }
 .card[data-cat="Computer Vision"]{--c:var(--cy)}
 .card[data-cat="Robotics & IoT"]{--c:var(--warm)}
-.card[data-cat="Web Development"]{--c:var(--vio)}
 .card:hover,.card:focus-within{
   transform:translateY(-6px);
   border-color:color-mix(in srgb,var(--c) 55%,var(--line));

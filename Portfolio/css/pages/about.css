@@ -133,7 +133,6 @@
 /* ---------- SECTION SPACING ---------- */
 
 .about-sides,
-.about-interests,
 .about-page .split {
   margin-bottom: 110px;
 }
@@ -203,47 +202,6 @@
   border-color: var(--c);
   color: var(--c);
   padding-left: 20px;
-}
-
-
-/* ---------- INTERESTS ---------- */
-
-.interest-grid {
-  list-style: none;
-
-  display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(min(100%, 260px), 1fr)
-  );
-
-  gap: 28px 24px;
-
-  margin: 0;
-  padding: 0;
-}
-
-.interest-grid li {
-  min-width: 0;
-  padding-left: 16px;
-
-  border-left: 2px solid var(--c);
-
-  transition: transform var(--transition-fast);
-}
-
-.interest-grid li:hover {
-  transform: translateX(4px);
-}
-
-.interest-grid h3 {
-  margin-bottom: 4px;
-  font-size: 1.05rem;
-}
-
-.interest-grid p {
-  color: var(--mut);
-  font-size: .95rem;
 }
 
 
@@ -391,11 +349,6 @@
 
 .split > .timeline-section {
   margin-top: 0;
-}
-
-.timeline-section > h3 {
-  margin-bottom: 24px;
-  font-size: 1.3rem;
 }
 
 .tl {
@@ -655,17 +608,12 @@
   }
 
   .about-sides,
-  .about-interests,
   .about-page .split {
     margin-bottom: 75px;
   }
 
   .side {
     padding: 22px;
-  }
-
-  .interest-grid {
-    gap: 22px;
   }
 
   .education-card,
@@ -710,7 +658,6 @@
   .experience-card,
   .education-card,
   .timeline-item,
-  .interest-grid li,
   .t-photo img,
   .about-photo img {
     transition: none;
@@ -719,8 +666,7 @@
   .side:hover,
   .experience-card:hover,
   .education-card:hover,
-  .timeline-item:hover,
-  .interest-grid li:hover {
+  .timeline-item:hover {
     transform: none;
   }
 

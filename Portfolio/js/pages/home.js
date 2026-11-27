@@ -40,28 +40,7 @@ if(ty){const L=["agentic RAG workflows","U-Net segmentation on satellite data","
       if(del&&c===0){del=false;i=(i+1)%L.length}
       c+=del?-1:1;setTimeout(tick,del?25:55)};tick()}}
 
-// 3. Marquee: duplicate the items for a seamless loop
-const tk=$(".ticker-track");
-if(tk&&!still)tk.append(...[...tk.children].map(n=>{const c=n.cloneNode(true);c.setAttribute("aria-hidden","true");return c}));
-
-// 4. Pipelines: nodes light up in sequence
-const FL={
- "Agentic RAG":["User query","Query routing","Knowledge retrieval","Evidence evaluation","Web search if required","Answer generation"],
- "Landslide segmentation":["Satellite image","Multispectral input","U-Net model","Pixel-level segmentation","Result visualization"],
- "Solar panel classifier":["Image upload","Preprocessing","EfficientNetB0","Classification","Predicted panel condition"],
- "ESP32-CAM robot":["Camera","ESP32-CAM","Motor control","Robot"]};
-const tabs=$("#pipe-tabs"),nodes=$("#pipe-nodes");let timer;
-if(tabs&&nodes){const names=Object.keys(FL);
-  tabs.innerHTML=names.map((n,i)=>`<button role="tab" aria-selected="${!i}">${n}</button>`).join("");
-  const show=n=>{clearInterval(timer);nodes.innerHTML=FL[n].map(s=>`<li>${s}</li>`).join("");
-    const li=$$("li",nodes);if(still){li.forEach(x=>x.classList.add("on"));return}
-    let k=0;const step=()=>{li.forEach((x,j)=>x.classList.toggle("on",j<=k));k=(k+1)%(li.length+2)};
-    step();timer=setInterval(step,850)};
-  tabs.onclick=e=>{const b=e.target.closest("button");if(!b)return;$$("button",tabs).forEach(x=>x.setAttribute("aria-selected",x===b));show(b.textContent)};
-  show(names[0]);
-}
-
-// 5. Card tilt (desktop only)
+// 3. Card tilt (desktop only)
 const g=$("#grid");
 if(g&&fine&&!still){
   g.addEventListener("pointermove",e=>{const c=e.target.closest(".card");if(!c)return;const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
